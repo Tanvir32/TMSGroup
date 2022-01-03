@@ -262,6 +262,18 @@
                 </div>
             </a>
         </div><!-- End Recent Work -->
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
+            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="frontend/assets/img/services-08.jpg" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
+                        <p class="card-text">Project Added by developer.</p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
 
     </div>
 </section>
