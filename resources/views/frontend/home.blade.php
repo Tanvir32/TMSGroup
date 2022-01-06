@@ -142,13 +142,13 @@
                     <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300" href="#" data-filter=".project">All</a>
                 </li>
                 <li class="nav-item mx-lg-4">
-                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".graphic">Running</a>
+                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".Running">Running</a>
                 </li>
                 <li class="filter-btn nav-item mx-lg-4">
-                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".ui">Completed</a>
+                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".Completed">Completed</a>
                 </li>
                 <li class="nav-item mx-lg-4">
-                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".branding">Proposed</a>
+                    <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".Proposed">Proposed</a>
                 </li>
             </ul>
         </div>
@@ -159,121 +159,21 @@
 <section class="container overflow-hidden py-5">
     <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
 
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui branding">
+        
+        @foreach ($projects as $project )
+            <div class="col-xl-3 col-md-4 col-sm-6 project {{ $project->status }}">
             <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="service card-img" src="frontend/assets/img/services-01.jpg" alt="Card image">
+                <img class="card-img" src="frontend/assets/img/test.png" alt="Card image">
                 <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                     <div class="service-work-content text-left text-light">
                         <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
+                        <p class="card-text">{{ $project->title }}</p>
                     </div>
                 </div>
             </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-02.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-03.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-04.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-05.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-06.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-07.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-08.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Short Note About this Project</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
-        <!-- Start Recent Work -->
-        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                <img class="card-img" src="frontend/assets/img/services-08.jpg" alt="Card image">
-                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                    <div class="service-work-content text-left text-light">
-                        <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
-                        <p class="card-text">Project Added by developer.</p>
-                    </div>
-                </div>
-            </a>
-        </div><!-- End Recent Work -->
+        </div>
+        @endforeach
+  
 
     </div>
 </section>

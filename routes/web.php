@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\HomeController;
+use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.home');
+  $data['projects'] = Project::where('projects.status','!=','Disabled')->get();
+
+    return view('frontend.home',$data);
 });
 
 Route::get('/about', function () {
@@ -34,4 +38,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
     Route::match(['get', 'post'], '/clients', [AboutController::class, 'clients'])->name('clients');
+    Route::get('/projects',[ProjectController::class,'index'])->name('projects');
+    Route::get('/projects/add', [ProjectController::class, 'add'])->name('projects.add');
+    Route::post('/projects/save', [ProjectController::class, 'save'])->name('projects.save');
+    Route::get('/projects/edit/{id}',[ProjectController::class,'edit'])->name('projects.edit');
 });

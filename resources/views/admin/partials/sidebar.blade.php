@@ -30,6 +30,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a href="{{ route('admin.projects') }}" class="nav-link ">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Projects
+              </p>
+            </a>
+          </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
