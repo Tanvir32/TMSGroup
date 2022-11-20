@@ -15,36 +15,64 @@ class AboutController extends Controller
         $this->middleware('auth');
     }
 
+
+    public function delete($id){
+        $clients = Client::all();
+        $data = Client::find($id);
+
+        $old_pic = $data->logo;
+
+        unlink(public_path('/frontend/assets/img/clients/' . $old_pic));
+
+        $data->delete();
+
+
+        $message = 'Client Deleted Successfully.';
+        $alert_type = 'success';
+
+
+        return redirect()->route('admin.clients')->with(compact('message', 'alert_type','clients'));
+    }
+
     public function clients(Request $request)
     {
+
+        // $clients = Client::Where('isActive',1)->get();
         $clients = Client::all();
+
         if ($request->isMethod('POST')) {
-            $data = $request->all();
-            $validator = Validator::make($data, [
-                'name' => 'required|max:50',
-                'image' => 'required',
-              ]);
-            if ($validator->fails()) {
-            //    return $validator->messages();
-                return redirect()->back()
-                    ->withErrors($validator)
-                    ->withInput();
+
+            $validate = $request->validate([
+                'name'=>'required',
+                'url' => 'required',
+                'isActive'=>'required',
+                'logo'=>'required',
+            ]);
+
+            if ($request->hasFile('logo')) {
+                $file = $request->file('logo');
+                $fileName = time().'.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path() . '/frontend/assets/img/clients';
+                $file->move($destinationPath, $fileName);
             }
 
-            
-            $img_file = $request->file('image');
-            $img_path = 'frontend/assets/img/clients/';
-            $name = time().'.'.$img_file->getClientOriginalExtension();
-            $image = Image::make($img_file->path());
-            $image->resize(600, 750)->save(public_path('/assets/images/products/'.$name));
-            $thumb_img = $img_path . $name;
-            $clientData = [
-                'name' => $data['name'],
-                'url' => $data['url'],
-                'image' => $image
-            ];
+            $insert = Client::create([
+                'name'=>$request->name,
+                'url'=>$request->url,
+                'isActive'=>$request->isActive,
+                'logo'=> $fileName,
+            ]);
+
+            //return $request;
+
+
+            $message = 'Client Added Successfully.';
+            $alert_type = 'success';
+
+
+            return redirect()->route('admin.clients')->with(compact('message','alert_type','clients'));
         }
         return View('admin.About.clients',compact('clients'));
     }
-    
+
 }

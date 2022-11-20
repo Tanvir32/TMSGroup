@@ -1,18 +1,7 @@
 @extends('admin.layouts.admin_layout')
 @section('content')
 
-    @if (Session::has('status'))
-        <div class="alert alert-success">
-            {{ Session::get('status') }}
-        </div>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            {{ Session::get('notification') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
+
 
     <div class="card card-primary">
         <div class="card-header">
@@ -20,12 +9,12 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" method="POST" action="{{ route('admin.projects.save') }}" enctype="multipart/form-data">
+        <form role="form" method="POST" action="{{ route('admin.projects.edit',$project->id) }}" enctype="multipart/form-data">
             @csrf
             <div class="card-body row">
                 <div class="form-group col-6">
                     <label for="exampleInputEmail1">Project Title</label>
-                    <input type="text"
+                    <input type="text" value="{{ $project->title }}"
                         class="form-control @error('title')
                         is-invalid
                     @enderror"
@@ -56,7 +45,7 @@
                     <textarea type="text" class="form-control @error('description')
                         is-invalid
                     @enderror" name="description"
-                        placeholder="Enter Project Details"></textarea>
+                        placeholder="Enter Project Details">{{ $project->description }}</textarea>
                     @error('description')
                         <span class="text-red">{{ $message }}</span>
                     @enderror
@@ -66,11 +55,13 @@
                     <select class="form-control @error('status')
                         is-invalid
                     @enderror" name="status" id="">
-                        <option value="" disabled selected>Select Project Status</option>
-                        <option value="Completed">Completed</option>
-                        <option value="Disabled">Disabled</option>
-                        <option value="Running">Running</option>
-                        <option value="Proposed">Proposed</option>
+                        @foreach ($project_status as $status)
+                            @if ($status == $project->status)
+                                <option value="{{ $status }}" selected>{{ $status }}</option>
+                            @else
+                            <option value="{{ $status }}">{{ $status }}</option>
+                            @endif
+                        @endforeach
                     </select>
                     @error('status')
                         <span class="text-red">{{ $message }}</span>
@@ -83,7 +74,7 @@
     <!-- /.card-body -->
 
     <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
     </form>
     </div>

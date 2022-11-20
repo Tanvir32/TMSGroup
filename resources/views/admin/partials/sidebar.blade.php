@@ -48,9 +48,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
+                <a href="{{route('admin.company.create')}}" class="nav-link">
+                  <i class="far fa-building nav-icon"></i>
+                  <p>Companies</p>
                 </a>
               </li>
             </ul>

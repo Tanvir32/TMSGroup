@@ -49,6 +49,12 @@
  <script type="text/javascript" src="frontend/assets/wowslider/engine1/wowslider.js"></script>
  <script type="text/javascript" src="frontend/assets/wowslider/engine1/script.js"></script>
 
+
+
+
+
+
+
  @stack('script')
 </body>
 

@@ -152,8 +152,9 @@ p, a {font-weight: 400;}
 .team-member-img {
   transition-duration: 0.15s;
 }
-.team-member:hover .team-member-img {
-  padding: 10px !important;
+.team-member:hover img  {
+  /* padding: 10px !important; */
+  scale: 1.08;
 }
 
 /* Work */

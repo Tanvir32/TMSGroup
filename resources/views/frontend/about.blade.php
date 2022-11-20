@@ -24,74 +24,75 @@
         <div class="pt-2 pb-3">
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 text-white">
                     <h2 class="h2 py-5 typo-space-line">Our Team</h2>
                 </div>
             </div>
-            
 
             <div class="row">
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/chairman.jpg" alt="Card image">
-                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Mst. Minetu Akter</h5></li>
-                        <li>Chairman</li>
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300 text-white">
+                        <li><h5 class="text-white">Mst. Minetu Akter</h5></li>
+                        <li class="text-white">Chairman</li>
                     </ul>
                 </div>
+
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/md.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Hawlader Md. Mostofa Rahman</h5></li>
-                        <li>Managing Director</li>
+                        <li><h5 class="text-white">Hawlader Md. Mostofa Rahman</h5></li>
+                        <li class="text-white">Managing Director</li>
                     </ul>
                 </div>
+
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/dms.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Engr. Md.Tajul Islam</h5></li>
-                        <li>Director Marketing & Sales</li>
+                        <li><h5 class="text-white">Engr. Md.Tajul Islam</h5></li>
+                        <li class="text-white">Director Marketing & Sales</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/kashidul.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Md. Kasidul Hawlader</h5></li>
-                        <li>Assistant Manager</li>
+                        <li><h5 class="text-white">Md. Kasidul Hawlader</h5></li>
+                        <li class="text-white">Assistant Manager</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/rizu.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Md. Raihanul Islam Rizu</h5></li>
-                        <li>Chief Architect</li>
+                        <li><h5 class="text-white">Md. Raihanul Islam Rizu</h5></li>
+                        <li class="text-white">Chief Architect</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/ashraful.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Khondaker Asraful Islam</h5></li>
-                        <li>Project Engineer Civil</li>
+                        <li><h5 class="text-white">Khondaker Asraful Islam</h5></li>
+                        <li class="text-white">Project Engineer Civil</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/parvez.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Md.Mainul Islam Parvez</h5></li>
-                        <li>B.SC. Engineer Civil</li>
+                        <li><h5 class="text-white">Md.Mainul Islam Parvez</h5></li>
+                        <li class="text-white">B.SC. Engineer Civil</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/majedur.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Md.Majedur Rahman</h5></li>
-                        <li>Project Engineer Civil</li>
+                        <li><h5 class="text-white">Md.Majedur Rahman</h5></li>
+                        <li class="text-white">Project Engineer Civil</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-3">
                     <img class="team-member-img img-fluid rounded-circle p-4" src="frontend/assets/img/mamun.jpg" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li><h5>Md Mamun Hawlader</h5></li>
-                        <li>Project Supervisor</li>
+                        <li><h5 class="text-white">Md Mamun Hawlader</h5></li>
+                        <li class="text-white">Project Supervisor</li>
                     </ul>
                 </div>
             </div>
@@ -105,41 +106,14 @@
         <div class="container py-5">
             <h2 class="h2 text-white text-center py-5">Our Clients</h2>
             <div class="row text-center" id="clientsSlider">
-                <div class="col-md-3 mb-3 client-logo-container">
-                    <a href="">
-                        <img src="frontend/assets/img/mamun.jpg" alt="">
+                @foreach ($clients as $client)
+                <div class="col-md-2 mb-3 mx-3 client-logo-container">
+                    <a href="{{$client->url}}" target="blank" title="{{$client->name}}">
+                        <img style="width: 100%; height: 18rem;" src="frontend/assets/img/clients/{{$client->logo}}" width="auto" alt="{{$client->name}}">
                     </a>
+                    <span class="text-white text-center">{{$client->name}}</span>
                 </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5 mr-2">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Company;
 use App\Models\Project;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -12,10 +13,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -24,10 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-  
         return view('admin.dashboard');
     }
 
-    
-    
+    public function home()
+    {
+        $projects = Project::where('projects.status', '!=', 'Disabled')->get();
+        $companies = Company::Where('isActive', 1)->get();
+
+        return view('test',compact('projects','companies'));
+    }
+
+    public function about()
+    {
+        $clients = Client::Where('isActive', 1)->get();
+
+        return view('frontend.about', compact('clients'));
+    }
+
 }

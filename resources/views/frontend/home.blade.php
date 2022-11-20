@@ -52,10 +52,11 @@
         </div>
         <div class="row gy-3 g-lg-4 mb-2">
 
-            <!-- Start Recent Work -->
+
+            @foreach ($companies as $company)
             <div class="col-md-3 mb-1">
-                <a href="https://www.facebook.com/bsc.bd" class="recent-work card border-0 shadow-lg overflow-hidden">
-                    <img class="recent-work-img card-img" src="frontend/assets/img/logo-1.jpg" alt="Card image">
+                <a href="{{ $company->url }}" target="blank" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="frontend/assets/img/companies/{{ $company->logo }}" alt="{{ $company->name }}">
                     <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="recent-work-content text-start mb-3 ml-3 text-dark">
                             {{-- <h5 class="card-title">Brother's Steel & Construction Ltd.</h5> --}}
@@ -63,65 +64,10 @@
                         </div>
                     </div>
                 </a>
-                <p  class="mt-1">MR Building Construction Ltd.</p>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-md-3 mb-1">
-                <a href="https://www.facebook.com/BGCL16" class="recent-work card border-0 shadow-lg overflow-hidden">
-                    <img class="recent-work-img card-img" src="frontend/assets/img/logo-2.jpg" alt="Card image">
-                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                            {{-- <h5 class="card-title">Brother's Glass & Construction Ltd.</h5> --}}
-                            <!-- <p class="card-text">Psum officia anim id est laborum.</p> -->
-                        </div>
-                    </div>
-                </a>
-                <p  class="mt-1">Brother's Glass & Construction Ltd.</p>
-            </div><!-- End Recent Work -->
-            <div class="col-md-3 mb-1">
-                <a href="https://www.facebook.com/Hawlader-Dairy-Farm-101750922295790/" class="recent-work card border-0 shadow-lg overflow-hidden">
-                    <img class="recent-work-img card-img" src="frontend/assets/img/logo-5.jpg" alt="Card image">
-                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                            {{-- <h5 class="card-title">Hawlader Dairy Farm</h5> --}}
-                            <!-- <p class="card-text">Lorem ipsum dolor sit amet</p> -->
-                        </div>
-                    </div>
-                </a>
-                <p  class="mt-1">Mehjabin Enterprise</p>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-md-3 mb-1">
-                <a href="https://www.facebook.com/Mehjabin-Enterprise-101462432329534" class="recent-work card border-0 shadow-lg overflow-hidden">
-                    <img class="recent-work-img card-img" src="frontend/assets/img/logo-3.jpg" alt="Card image">
-                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                            {{-- <h5 class="card-title">Mehjabin Enterprise</h5> --}}
-                            <!-- <p class="card-text">Sum dolor sit consencutur</p> -->
-                        </div>
-                    </div>
-                </a>
-                <p  class="mt-1">Brother's Steel & Construction Ltd.</p>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-md-3 mb-1">
-                <a href="https://www.facebook.com/Hawlader-Dairy-Farm-101750922295790/" class="recent-work card border-0 shadow-lg overflow-hidden">
-                    <img class="recent-work-img card-img" src="frontend/assets/img/logo-4.jpg" alt="Card image">
-                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                            {{-- <h5 class="card-title">Hawlader Dairy Farm</h5> --}}
-                            <!-- <p class="card-text">Lorem ipsum dolor sit amet</p> -->
-                        </div>
-                    </div>
-                </a>
-                <p  class="mt-1">Hawladar Dairy Farm</p>
+                <p  class="mt-1">{{ $company->name }}</p>
             </div>
-            
-            
-            <!-- End Recent Work -->
+            @endforeach
+
 
         </div>
     </div>
@@ -158,11 +104,9 @@
 
 <section class="container overflow-hidden py-5">
     <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
-
-        
         @foreach ($projects as $project )
             <div class="col-xl-3 col-md-4 col-sm-6 project {{ $project->status }}">
-            <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+            <a  class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                 <img class="card-img" src="frontend/assets/img/test.png" alt="Card image">
                 <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                     <div class="service-work-content text-left text-light">
@@ -173,9 +117,23 @@
             </a>
         </div>
         @endforeach
-  
+
 
     </div>
+
+    <div class="col-xl-3 col-md-4 col-sm-6 project mt-5 " onclick="openGalaryDif()">
+        <a  class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+            <img class="card-img" src="frontend/assets/img/test.png" alt="Card image">
+            <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                <div class="service-work-content text-left text-light">
+                    <!-- <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300"></span> -->
+                    <p class="card-text">gggfg</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
 </section>
 <!-- End Service -->
 @endsection
