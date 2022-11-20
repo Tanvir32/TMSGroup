@@ -44,20 +44,32 @@
     <div class="container">
         <div id="wowslider-container1">
             <div class="ws_images"><ul>
-                <li><img src="frontend/assets/wowslider/data1/images/mrslider4.jpg" alt="mr-slider-4" id="wows1_0"/></li>
-                <li><img src="frontend/assets/wowslider/data1/images/mrslider1.jpg" alt="mr-slider-1" id="wows1_1"/></li>
-                <li><img src="frontend/assets/wowslider/data1/images/mrslider2.jpg" alt="mr-slider-2" id="wows1_2"/></li>
-                <li><img src="frontend/assets/wowslider/data1/images/mrslider3.jpg" alt="slider jquery" id="wows1_3"/></li>
+                <li><img src="frontend/assets/wowslider/data1/images/slider1.png" alt="mr-slider-1" id="wows1_0"/></li>
+                <li><img src="frontend/assets/wowslider/data1/images/mrslider1.jpg" alt="mr-slider-2" id="wows1_1"/></li>
+                <li><img src="frontend/assets/wowslider/data1/images/mrslider2.jpg" alt="mr-slider-3" id="wows1_2"/></li>
+                <li><img src="frontend/assets/wowslider/data1/images/mrslider3.jpg" alt="mr-slider-4" id="wows1_3"/></li>
                 <li><img src="frontend/assets/wowslider/data1/images/mrslider5.jpg" alt="mr-slider-5" id="wows1_4"/></li>
+                @if ($banners)
+                    @foreach ($banners as $banner)
+                    <li><img src="frontend/assets/wowslider/data1/images/{{$banner->banner}}" alt="mr-slder-{{$loop->index}}" id="wows1_{{$loop->index}}"/></li>
+                    @endforeach
+                @else
+                    <span>No Banner Found in Database</span>
+                @endif
             </ul></div>
             <div class="ws_bullets"><div>
-                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider4.jpg" alt="mr-slider-4"/>1</span></a>
-                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider1.jpg" alt="mr-slider-1"/>2</span></a>
-                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider2.jpg" alt="mr-slider-2"/>3</span></a>
-                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider3.jpg" alt="mr-slider-3"/>4</span></a>
+                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/slider1.png" alt="mr-slider-1"/>1</span></a>
+                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider1.jpg" alt="mr-slider-2"/>2</span></a>
+                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider2.jpg" alt="mr-slider-3"/>3</span></a>
+                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider3.jpg" alt="mr-slider-4"/>4</span></a>
                 <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider5.jpg" alt="mr-slider-5"/>5</span></a>
+                @if ($banners)
+                    @foreach ($banners as $banner)
+                    <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/{{$banner->banner}}" alt="mr-sider-{{$loop->index}}"/>5</span></a>
+                    @endforeach
+                @endif
             </div></div>
-            {{-- <div class="ws_shadow"></div> --}}
+            <div class="ws_shadow"></div>
             </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Company;
+use App\Models\HeroBanner;
 use App\Models\Project;
 
 class HomeController extends Controller
@@ -30,10 +31,12 @@ class HomeController extends Controller
 
     public function home()
     {
+        $banners = HeroBanner::where('isActive',1)->get();
         $projects = Project::where('projects.status', '!=', 'Disabled')->get();
         $companies = Company::Where('isActive', 1)->get();
 
-        return view('test',compact('projects','companies'));
+
+        return view('test',compact('banners','projects','companies'));
     }
 
     public function about()

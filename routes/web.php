@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminGalaryController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\HeroBannerController;
 use App\Http\Controllers\GalaryController;
 use App\Http\Controllers\HomeController;
 use App\Models\Project;
@@ -43,6 +44,10 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
   Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
   Route::match(['get', 'post'], '/clients', [AboutController::class, 'clients'])->name('clients');
   Route::match(['get', 'post'], '/companies', [CompanyController::class, 'create'])->name('company.create');
+
+  Route::match(['get','post'], '/banners', [HeroBannerController::class, 'create'])->name('banner.create');
+  Route::get('/banners/delete/{id}', [HeroBannerController::class, 'delete'])->name('banner.delete');
+
   Route::get('/clients/delete/{id}', [AboutController::class, 'delete'])->name('clients.delete');
   Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
   Route::get('/projects/galary/{id}',[AdminGalaryController::class,'show'])->name('galary');
