@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Start Banner Hero -->
-    <section class="bg-light w-100">
+    <section class="w-100 text-white" style="background-color: #041c2d!important">
         <div class="container">
             <div class="row d-flex align-items-center py-5">
                 <div class="col-lg-6 text-start">

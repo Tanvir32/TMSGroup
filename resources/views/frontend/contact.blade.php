@@ -1,13 +1,13 @@
 @extends('layouts.frontend')
 @section('content')
     <!-- Start Banner Hero -->
-    <section class="bg-light">
+    <section class="w-100 text-white" style="background-color: #041c2d!important">
         <div class="container py-4">
             <div class="row align-items-center justify-content-between">
                 <div class="contact-header col-lg-4">
                     <h1 class="h2 pb-3">Contact</h1>
                     <p class="light-300">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime eos architecto recusandae sed, accusamus veniam porro, iste id similique nemo explicabo nihil quo dolorum a, tempora laudantium molestias officiis veritatis!
+                        For any query please fill the below form and send message to us
                     </p>
                 </div>
                 <div class="contact-img col-lg-5 align-items-end col-md-4">
@@ -23,44 +23,44 @@
     <section class="container py-5">
 
         <div class="row pb-4">
-            <div class="col-lg-4">
+            <div class="col-lg-4 text-white">
 
                 <div class="contact row mb-4">
                     <div class="contact-icon col-lg-3 col-3">
                         <div class="py-3 mb-2 text-center border rounded text-secondary">
-                            <i class='display-6 bx bx-news color-brand'></i>
+                            <i class='display-6 text-white bx bx-phone color-brand'></i>
                         </div>
                     </div>
                     <ul class="contact-info list-unstyled col-lg-9 col-9  light-300">
                         <li class="h5 mb-0">Marketing & Sales</li>
-                        <li class="text-muted">Enge.Md.Tajul Islam</li>
-                        <li class="text-muted">01713269679</li>
+                        <li class="text-white">Enge.Md.Tajul Islam</li>
+                        <li class="text-white">01713269679</li>
                     </ul>
                 </div>
 
                 <div class="contact row mb-4">
                     <div class="contact-icon col-lg-3 col-3">
                         <div class="border py-3 mb-2 text-center border rounded text-secondary">
-                            <i class='bx bx-laptop display-6 color-brand' ></i>
+                            <i class='bx text-white bx-phone display-6 color-brand' ></i>
                         </div>
                     </div>
                     <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
                         <li class="h5 mb-0">Managing Director</li>
-                        <li class="text-muted">Hawlader Md.Mostofa Rahman</li>
-                        <li class="text-muted">01713994291</li>
+                        <li class="text-white">Hawlader Md.Mostofa Rahman</li>
+                        <li class="text-white">01713994291</li>
                     </ul>
                 </div>
 
                 <div class="contact row mb-4">
                     <div class="contact-icon col-lg-3 col-3">
                         <div class="border py-3 mb-2 text-center border rounded text-secondary">
-                            <i class='bx bx-money display-6 color-brand'></i>
+                            <i class='bx text-white bx-phone display-6 color-brand'></i>
                         </div>
                     </div>
                     <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
                         <li class="h5 mb-0"> Project Engineer Civil</li>
-                        <li class="text-muted">Md.Majedur Rahman</li>
-                        <li class="text-muted">01713419806</li>
+                        <li class="text-white">Md.Majedur Rahman</li>
+                        <li class="text-white">01713419806</li>
                     </ul>
                 </div>
 
