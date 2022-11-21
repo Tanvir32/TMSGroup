@@ -243,9 +243,12 @@
 <script>
     $(document).ready(function(){
     $('#clientsSlider').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
+        arrows: true,
+        //centerMode:true,
+        draggable: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay:true,

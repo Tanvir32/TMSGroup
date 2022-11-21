@@ -31,9 +31,9 @@ class HomeController extends Controller
 
     public function home()
     {
-        $banners = HeroBanner::where('isActive',1)->get();
-        $projects = Project::where('projects.status', '!=', 'Disabled')->get();
-        $companies = Company::Where('isActive', 1)->get();
+        $banners = HeroBanner::where('isActive',1)->orderBy('id','desc')->get();
+        $projects = Project::where('projects.status', '!=', 'Disabled')->orderBy('id','desc')->get();
+        $companies = Company::Where('isActive', 1)->orderBy('id','desc')->get();
 
 
         return view('test',compact('banners','projects','companies'));
@@ -41,7 +41,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        $clients = Client::Where('isActive', 1)->get();
+        $clients = Client::Where('isActive', 1)->orderBy('id','desc')->get();
 
         return view('frontend.about', compact('clients'));
     }
