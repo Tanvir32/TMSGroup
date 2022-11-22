@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminGalaryController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\HeroBannerController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GalaryController;
 use App\Http\Controllers\HomeController;
 use App\Models\Project;
@@ -31,9 +32,9 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::get('/about',[HomeController::class, 'about'])->name('about');
 
-Route::get('/contact', function () {
-  return view('frontend.contact');
-});
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+Route::post('/send',[ContactController::class, 'send'])->name('mail.send');
 
 Route::get('/galary/{id}', [GalaryController::class, 'galaryByProject'])->name('galaryByProject');
 
