@@ -31,6 +31,11 @@
     }
 </script>
 
+<style>
+    .service-img>img{
+
+    }
+</style>
 
 </head>
 
@@ -44,11 +49,12 @@
     <div class="container">
         <div id="wowslider-container1">
             <div class="ws_images"><ul>
-                <li><img src="frontend/assets/wowslider/data1/images/slider1.png" alt="mr-slider-1" id="wows1_0"/></li>
+                {{-- <li><img src="frontend/assets/wowslider/data1/images/slider1.png" alt="mr-slider-1" id="wows1_0"/></li> --}}
                 <li><img src="frontend/assets/wowslider/data1/images/mrslider1.jpg" alt="mr-slider-2" id="wows1_1"/></li>
                 <li><img src="frontend/assets/wowslider/data1/images/mrslider2.jpg" alt="mr-slider-3" id="wows1_2"/></li>
                 <li><img src="frontend/assets/wowslider/data1/images/mrslider3.jpg" alt="mr-slider-4" id="wows1_3"/></li>
                 <li><img src="frontend/assets/wowslider/data1/images/mrslider5.jpg" alt="mr-slider-5" id="wows1_4"/></li>
+                <li><img src="frontend/assets/wowslider/data1/images/slide051.jpg" alt="mr-slider-5" id="wows1_4"/></li>
                 @if ($banners)
                     @foreach ($banners as $banner)
                     <li><img src="frontend/assets/wowslider/data1/images/{{$banner->banner}}" alt="mr-slder-{{$loop->index}}" id="wows1_{{$loop->index}}"/></li>
@@ -58,11 +64,12 @@
                 @endif
             </ul></div>
             <div class="ws_bullets"><div>
-                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/slider1.png" alt="mr-slider-1"/>1</span></a>
+                {{-- <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/slider1.png" alt="mr-slider-1"/>1</span></a> --}}
                 <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider1.jpg" alt="mr-slider-2"/>2</span></a>
                 <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider2.jpg" alt="mr-slider-3"/>3</span></a>
                 <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider3.jpg" alt="mr-slider-4"/>4</span></a>
                 <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/mrslider5.jpg" alt="mr-slider-5"/>5</span></a>
+                <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/slide051.jpg" alt="mr-slider-5"/>5</span></a>
                 @if ($banners)
                     @foreach ($banners as $banner)
                     <a href="#"><span><img src="frontend/assets/wowslider/data1/tooltips/{{$banner->banner}}" alt="mr-sider-{{$loop->index}}"/>5</span></a>
@@ -101,6 +108,30 @@
     </div>
 </section>
 
+<section class=" mb-5 company-bg text-white">
+    <div class="container">
+        <div class="recent-work-header row text-center pb-2">
+            <h3 class="col-md-6 m-auto semi-bold-600 py-1">Our Services</h3>
+        </div>
+        <div class="row gy-3 g-lg-4 mb-2">
+            @foreach ($services as $service)
+            <div class="col-md-3 mb-1">
+                <div class="service-img">
+                    <img class="card-img" width="100%" height="auto" src="frontend/assets/img/services/{{ $service->image }}" alt="{{ $service->name }}">
+                    <div class="d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            {{-- <h5 class="card-title">Brother's Steel & Construction Ltd.</h5> --}}
+                            {{-- <p class="card-text">Ullamco laboris nisi ut aliquip ex</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <p  class="mt-1 text-center">{{ $service->name }}</p>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
 
 <!-- Start Service -->
 <section class="service-wrapper text-white">

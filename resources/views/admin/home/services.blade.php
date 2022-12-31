@@ -1,6 +1,6 @@
 @extends('admin.layouts.admin_layout')
-@section('title','Companies')
-@section('content_header','Our Companies')
+@section('title','Services')
+@section('content_header','Our Services')
 @section('content')
 <div class="row">
     <div class="col-md-12 card">
@@ -10,27 +10,20 @@
                     {{ Session::get('product_added') }}
                 </div>
             @endif
-            <form class="form row" method="POST" action="{{route('admin.company.create')}}" enctype="multipart/form-data">
+            <form class="form row" method="POST" action="{{route('admin.service.create')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group col-md-3">
-                    <label class="col-form-label" for="">Company Name</label>
-                    <input type="text" class="form-control" value="{{old('name')}}" name="name" placeholder="ABC Group Ltd.">
+                    <label class="col-form-label" for="">Service Name</label>
+                    <input type="text" class="form-control" value="{{old('name')}}" name="name" placeholder="Service Name">
                     @error('name')
                         <span class="text-danger">{{ $errors->first('url') }}</span>
                     @enderror
                 </div>
                 <div class="form-group col-md-3">
-                    <label class="col-form-label" for="">Website / FB Page URL</label>
-                    <input type="text" class="form-control" name="url" placeholder="https://www.website.com">
-                    @error('url')
-                        <span class="text-danger">{{ $errors->first('url') }}</span>
-                    @enderror
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="image">Company Logo</label>
-                    <input type="file" id="image" cols="30" rows="5" value="{{old('logo')}}" placeholder="Clients Logo" name="logo" class="form-control input-file" >
-                    @error('logo')
-                        <strong class="text-danger">{{ $errors->first('logo') }}</strong>
+                    <label for="image">Service Image</label>
+                    <input type="file" id="image" cols="30" rows="5" value="{{old('image')}}" placeholder="Service Image" name="image" class="form-control input-file" >
+                    @error('image')
+                        <strong class="text-danger">{{ $errors->first('image') }}</strong>
                     @enderror
                 </div>
                 <div class="form-group col-md-2">
@@ -55,23 +48,19 @@
                 <thead>
                     <tr>
                         <th>SL No</th>
-                        <th>Company Name</th>
+                        <th>Service Name</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($companies as $company)
+                    @foreach ($services as $client)
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
-                        <td>{{ $company->name}}</td>
-                        <td>{{ $company->isActive ? "Active" : "In-Active" }}</td>
+                        <td>{{ $client->name}}</td>
+                        <td>{{ $client->isActive ? "Active" : "In-Active" }}</td>
                         <td>
-                            {{-- <a  onclick="deleteCompany({{ $company->id }})">
-                                <i class="fas fa-trash-alt text-danger"></i>
-                            </a> --}}
-
-                            <a href="{{ route('admin.company.delete',$company->id) }}">
+                            <a  onclick="deleteCompany({{ $client->id }})">
                                 <i class="fas fa-trash-alt text-danger"></i>
                             </a>
                         </td>
@@ -92,7 +81,7 @@
         });
 
         function deleteCompany(id) {
-            let url = "{{ route('admin.company.create') }}"+"/delete/";
+            let url = "{{ route('admin.service.create') }}"+"/delete/";
             swal({
                     title: "Are you sure?",
                     text: "Once deleted, you will not be able to recover this imaginary file!",

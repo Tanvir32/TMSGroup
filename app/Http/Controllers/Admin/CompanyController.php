@@ -57,4 +57,22 @@ class CompanyController extends Controller
         return View('admin.home.companies', compact('companies'));
     }
 
+
+    public function delete($id){
+        $companies = Company::all();
+        $company = Company::find($id);
+
+        $old_pic = $company->image;
+
+        unlink(public_path('/frontend/assets/img/companies/' . $old_pic));
+
+        $company->delete();
+
+        $message = 'Company Deleted Successfully.';
+        $alert_type = 'danger';
+
+        return redirect()->route('admin.company.create')->with(compact('message', 'alert_type','companies'));
+
+    }
+
 }

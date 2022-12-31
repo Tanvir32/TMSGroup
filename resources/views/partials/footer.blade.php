@@ -19,7 +19,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item m-0">
-                        <a class="text-light" target="_blank" href="https://www.linkedin.com/mrbclbd">
+                        <a class="text-light" target="_blank" href="https://www.linkedin.com/in/mostafa-rohman-5618a2202/">
                             <i class='bx bxl-linkedin-square bx-md'></i>
                         </a>
                     </li>
@@ -80,7 +80,7 @@
                         <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:+88028999490">+8802-8999490</a>
                     </li>
                     <li class="pb-2">
-                        <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:01713419806">01713-419806</a>
+                        <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:01713419806">+8801713-419806</a>
                     </li>
                     <li class="pb-2">
                         <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:info@mrbclbd.com">info@mrbclbd.com</a>

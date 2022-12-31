@@ -34,7 +34,7 @@
                     <ul class="contact-info list-unstyled col-lg-9 col-9  light-300">
                         <li class="h5 mb-0">Marketing & Sales</li>
                         <li class="text-white">Enge.Md.Tajul Islam</li>
-                        <li class="text-white">01713269679</li>
+                        <li class="text-white">+8801713269679</li>
                     </ul>
                 </div>
 
@@ -47,7 +47,7 @@
                     <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
                         <li class="h5 mb-0">Managing Director</li>
                         <li class="text-white">Hawlader Md.Mostofa Rahman</li>
-                        <li class="text-white">01713994291</li>
+                        <li class="text-white">+8801713994291</li>
                     </ul>
                 </div>
 
@@ -60,7 +60,7 @@
                     <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
                         <li class="h5 mb-0"> Project Engineer Civil</li>
                         <li class="text-white">Md.Majedur Rahman</li>
-                        <li class="text-white">01713419806</li>
+                        <li class="text-white">+8801716159506</li>
                     </ul>
                 </div>
 

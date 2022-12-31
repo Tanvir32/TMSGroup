@@ -27,10 +27,10 @@
         </a>
       </li>
       <li class="nav-item" title="Logout">
-        
+
           <a class="nav-link btn btn-danger" href="{{ route('logout') }}"
           onclick="event.preventDefault();
-          document.getElementById('logout-form').submit();">   
+          document.getElementById('logout-form').submit();">
           <i class="fas fa-sign-out-alt text-white"></i>
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

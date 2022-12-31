@@ -40,15 +40,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{route('admin.banner.create')}}" class="nav-link">
+                  <i class="far fa-image nav-icon"></i>
+                  <p>Banners</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('admin.company.create')}}" class="nav-link">
                   <i class="far fa-building nav-icon"></i>
                   <p>Companies</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('admin.banner.create')}}" class="nav-link">
-                  <i class="far fa-image nav-icon"></i>
-                  <p>Banners</p>
+                <a href="{{route('admin.service.create')}}" class="nav-link">
+                  <i class="far fa-building nav-icon"></i>
+                  <p>Services</p>
                 </a>
               </li>
               <li class="nav-item">

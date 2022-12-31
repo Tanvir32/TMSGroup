@@ -44,7 +44,7 @@ class AboutController extends Controller
 
             $validate = $request->validate([
                 'name'=>'required',
-                'url' => 'required',
+                // 'url' => 'required',
                 'isActive'=>'required',
                 'logo'=>'required',
             ]);

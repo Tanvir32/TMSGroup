@@ -107,9 +107,9 @@
             <h2 class="h2 text-white text-center py-5">Our Clients</h2>
             <div class="row text-center" id="clientsSlider">
                 @foreach ($clients as $client)
-                <div class="col-md-2 mb-3 mx-3 client-logo-container">
+                <div class="col-md-1 mb-3 mx-3 client-logo-container">
                     <a href="{{$client->url}}" target="blank" title="{{$client->name}}">
-                        <img style="width: 100%; height: 18rem;" src="frontend/assets/img/clients/{{$client->logo}}" width="auto" alt="{{$client->name}}">
+                        <img style="width:100%; height: 8rem;" src="frontend/assets/img/clients/{{$client->logo}}" alt="{{$client->name}}">
                     </a>
                     <span class="text-white text-center">{{$client->name}}</span>
                 </div>
