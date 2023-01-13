@@ -191,37 +191,45 @@
         <div class="container my-4">
             <div class="row text-center">
 
-                <div class="objective col-lg-4">
+                <div class="objective col-lg-6">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
                         <i class="display-4 bx bxs-bulb text-light"></i>
                     </div>
                     <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Vision</h2>
                     <p class="light-300">
-                        Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse commodo viverra.
+                        To sustain the high level of qualified personnel and build professional team committed to serve our clients. Our pledge is to
+establish lasting relationships with our customers by exceeding their expectations and gaining their trust, through
+exceptional performance by every member of the BSCL team.
                     </p>
                 </div>
 
-                <div class="objective col-lg-4 mt-sm-0 mt-4">
+                <div class="objective col-lg-6 mt-sm-0 mt-4">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
                         <i class='display-4 bx bx-revision text-light'></i>
                     </div>
                     <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Mission</h2>
                     <p class="light-300">
-                        Eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam quis.
+                        To be the leading local firm in the state of Bangladesh in the field of corporate building infrastructure and construction
+BSCL will strive to offer excellent services by providing high quality of work, applying the latest available technology for the
+industry, and seeking more joint ventures with interactional to have the opportunity higher weighted projects.
                     </p>
                 </div>
 
-                <div class="objective col-lg-4 mt-sm-0 mt-4">
+                {{-- <div class="objective col-lg-4 mt-sm-0 mt-4">
                     <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
                         <i class="display-4 bx bxs-select-multiple text-light"></i>
                     </div>
-                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Our Goal</h2>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">Values</h2>
                     <p class="light-300">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor.
+                            Uncompromising commitment to Quality, Health, Safety and Environment.<br>
+                            An open relationship with our employees based on mutual trust, respect and success.<br>
+                            Transparency, Accountability and Discipline in our business.<br>
+                            Best in class Risk Awareness.<br>
+                            Integrity in all we do.<br>
+                            Financial Responsibility to our stakeholders.<br>
+                        </ol>
                     </p>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -230,9 +238,13 @@
 
     <section class="certificate-area">
         <div class="container my-4">
+            <h2 class="h2 text-white text-center py-5">Certifications</h2>
             <div class="row">
-                <div class="col-md-8 offset-md-2">
+                <div class="col-md-4 mb-4">
                     <img class="text-center" src="frontend/assets/img/certificate.jpg" width="100%" alt="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img class="text-center" src="frontend/assets/img/Mushak.jpg" width="100%" alt="">
                 </div>
             </div>
         </div>

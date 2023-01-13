@@ -1,194 +1,281 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml">
 
 <head>
-    <title></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <!--[if !mso]--><!-- -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700' rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel="stylesheet">
+    <!--<![endif]-->
+
+    <title>Material Design for Bootstrap</title>
+
     <style type="text/css">
-        @media screen {
-            @font-face {
-                font-family: 'Lato';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-            }
-
-            @font-face {
-                font-family: 'Lato';
-                font-style: normal;
-                font-weight: 700;
-                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-            }
-
-            @font-face {
-                font-family: 'Lato';
-                font-style: italic;
-                font-weight: 400;
-                src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-            }
-
-            @font-face {
-                font-family: 'Lato';
-                font-style: italic;
-                font-weight: 700;
-                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-            }
+        body {
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            mso-margin-top-alt: 0px;
+            mso-margin-bottom-alt: 0px;
+            mso-padding-alt: 0px 0px 0px 0px;
         }
 
-        /* CLIENT-SPECIFIC STYLES */
-        body,
-        table,
-        td,
-        a {
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
-        table,
-        td {
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
+        span.preheader {
+            display: none;
+            font-size: 1px;
         }
 
-        img {
-            -ms-interpolation-mode: bicubic;
-        }
-
-        /* RESET STYLES */
-        img {
-            border: 0;
-            height: auto;
-            line-height: 100%;
-            outline: none;
-            text-decoration: none;
+        html {
+            width: 100%;
         }
 
         table {
-            border-collapse: collapse !important;
+            font-size: 14px;
+            border: 0;
         }
+        /* ----------- responsivity ----------- */
 
-        body {
-            height: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-        }
-
-        /* iOS BLUE LINKS */
-        a[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important;
-        }
-
-        /* MOBILE STYLES */
-        @media screen and (max-width:600px) {
-            h1 {
-                font-size: 32px !important;
-                line-height: 32px !important;
+        @media only screen and (max-width: 640px) {
+            /*------ top header ------ */
+            .main-header {
+                font-size: 20px !important;
+            }
+            .main-section-header {
+                font-size: 28px !important;
+            }
+            .show {
+                display: block !important;
+            }
+            .hide {
+                display: none !important;
+            }
+            .align-center {
+                text-align: center !important;
+            }
+            .no-bg {
+                background: none !important;
+            }
+            /*----- main image -------*/
+            .main-image img {
+                width: 440px !important;
+                height: auto !important;
+            }
+            /* ====== divider ====== */
+            .divider img {
+                width: 440px !important;
+            }
+            /*-------- container --------*/
+            .container590 {
+                width: 440px !important;
+            }
+            .container580 {
+                width: 400px !important;
+            }
+            .main-button {
+                width: 220px !important;
+            }
+            /*-------- secions ----------*/
+            .section-img img {
+                width: 320px !important;
+                height: auto !important;
+            }
+            .team-img img {
+                width: 100% !important;
+                height: auto !important;
             }
         }
 
-        /* ANDROID CENTER FIX */
-        div[style*="margin: 16px 0;"] {
-            margin: 0 !important;
+        @media only screen and (max-width: 479px) {
+            /*------ top header ------ */
+            .main-header {
+                font-size: 18px !important;
+            }
+            .main-section-header {
+                font-size: 26px !important;
+            }
+            /* ====== divider ====== */
+            .divider img {
+                width: 280px !important;
+            }
+            /*-------- container --------*/
+            .container590 {
+                width: 280px !important;
+            }
+            .container590 {
+                width: 280px !important;
+            }
+            .container580 {
+                width: 260px !important;
+            }
+            /*-------- secions ----------*/
+            .section-img img {
+                width: 280px !important;
+                height: auto !important;
+            }
         }
     </style>
+    <!--[if gte mso 9]><style type=”text/css”>
+        body {
+        font-family: arial, sans-serif!important;
+        }
+        </style>
+    <![endif]-->
 </head>
 
-<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
-    <!-- HIDDEN PREHEADER TEXT -->
-    <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We're thrilled to have you here! Get ready to dive into your new account.
-    </div>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <!-- LOGO -->
-        <tr>
-            <td bgcolor="#FFA73B" align="center">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                    <tr>
-                        <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                    <tr>
-                        <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                            <h3 style="font-size: 48px; font-weight: 400; margin: 2;">New Message!</h3>
-                        </tr>
 
-                    </td>
-                </table>
+<body class="respond" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <!-- pre-header -->
+    <table style="display:none!important;">
+        <tr>
+            <td>
+                <div style="overflow:hidden;display:none;font-size:1px;color:#ffffff;line-height:1px;font-family:Arial;maxheight:0px;max-width:0px;opacity:0;">
+                    Welcome to TMS Group!
+                </div>
             </td>
         </tr>
+    </table>
+    <!-- pre-header end -->
+    <!-- header -->
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="ffffff">
+
         <tr>
-            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+            <td align="center">
+                <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590">
+
                     <tr>
-                        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">{{$mailBody}}</p>
-                        </td>
+                        <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
                     </tr>
+
                     <tr>
-                        <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">
-                                <b>{{$fromName}}</b><br>
-                                <i>{{$fromCompany}}</i><br>
-                                <span style="text-decoration: none">{{$fromMail}}</span><br>
-                                <span>{{$fromMoblie}}</span>
-                            </p>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td bgcolor="#ffffff" align="left">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <td align="center">
+
+                            <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590">
+
                                 <tr>
-                                    <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
-                                        <table border="0" cellspacing="0" cellpadding="0">
+                                    <td align="center" height="70" style="height:70px;">
+                                        <a href="" style="display: block; border-style: none !important; border: 0 !important;"><img width="100" border="0" style="display: block; width: 200px;" src="http://mrbclbd.com/frontend/assets/img/tms_logo.png" alt="" /></a>
+                                    </td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <td align="center">
+                                        <table width="360 " border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
+                                            class="container590 hide">
                                             <tr>
-                                                <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a href="#" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td>
+                                                <td width="120" align="center" style="font-size: 14px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
+                                                    <a href="" style="color: #312c32; text-decoration: none;">MEN</a>
+                                                </td>
+                                                <td width="120" align="center" style="font-size: 14px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
+                                                    <a href="" style="color: #312c32; text-decoration: none;">WOMEN</a>
+                                                </td>
+                                                <td width="120" align="center" style="font-size: 14px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;">
+                                                    <a href="" style="color: #312c32; text-decoration: none;">BLOG</a>
+                                                </td>
                                             </tr>
                                         </table>
+                                    </td>
+                                </tr> -->
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- end header -->
+
+    <!-- big image section -->
+
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="ffffff" class="bg_color">
+
+        <tr>
+            <td align="center">
+                <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590">
+
+                    <tr>
+                        <td align="center" style="color: #343434; font-size: 24px; font-family: Quicksand, Calibri, sans-serif; font-weight:700;letter-spacing: 3px; line-height: 35px;"
+                            class="main-header">
+                            <!-- section text ======-->
+
+                            <div style="line-height: 35px">
+
+                                A New Message form <span style="color: #5caad2;"><a href="https://mrbclbd.com/" style="color: #5caad2; text-decoration: none;">Website</a></span>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            <table border="0" width="40" align="center" cellpadding="0" cellspacing="0" bgcolor="eeeeee">
+                                <tr>
+                                    <td height="2" style="font-size: 2px; line-height: 2px;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <table border="0" width="590" align="center" cellpadding="0" cellspacing="0" class="container590">
+                                <tr>
+                                    <td align="left" style="color: #494949; background: #d4f1ff; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px; padding: 1.5rem;">
+                                        <!-- section text ======-->
+                                        <p style="line-height: 24px;margin-bottom:15px;">
+                                            {{$mailBody}}
+                                        </p>
+                                        <p style="line-height: 24px">
+                                            Regards,<br>
+                                            <b>{{$fromName}}</b><br>
+                                            <i>{{$fromCompany}}</i><br>
+                                            <span style="text-decoration: none">Email: {{$fromMail}}</span><br>
+                                            <span>Phone: {{$fromMoblie}}</span>
+                                        </p>
+
                                     </td>
                                 </tr>
                             </table>
                         </td>
-                    </tr> COPY -->
+                    </tr>
 
                 </table>
+
             </td>
         </tr>
+
         <tr>
-            <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                    <tr>
-                        <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                            <!-- <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2> -->
-                            <p style="margin: 0;">Message From <a href="https://mrbclbd.com/" target="_blank" style="color: #FFA73B;">TMS Group</a></p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
+            <td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td>
         </tr>
-        <!-- <tr>
-            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                    <tr>
-                        <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br>
-                            <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr> -->
+
     </table>
+
 </body>
 
 </html>
